@@ -28,7 +28,7 @@ else:
 
 DEFAULT_PARAMS = {
     # 基础画像与类型
-    "USER_ALIAS": "受测者代号",
+    "USER_ALIAS": "用户昵称",
     "ASSESSMENT_DATE": datetime.now().strftime("%Y-%m-%d"),
     "MBTI_TYPE": "INTJ (建筑师 / 战略家)",
     "ENNEAGRAM_PROFILE": "5w6 (系统防灾理智观察者)",
@@ -118,7 +118,7 @@ def render_file(template_path: str, output_path: str, params: dict):
     print(f"[OK] 成功生成: {output_path}")
 
 
-def generate_reports(output_dir: str = None, params: dict = None):
+def generate_reports(output_dir: str = None, params: dict = None, auto_archive: bool = True):
     if params is None:
         params = dict(DEFAULT_PARAMS)
 
@@ -139,11 +139,32 @@ def generate_reports(output_dir: str = None, params: dict = None):
     md_tpl = os.path.join(BASE_DIR, "resources", "report_template.md")
     html_tpl = os.path.join(BASE_DIR, "resources", "report_template.html")
 
+    # 1. 始终生成/更新 outputs/ 下的固定文件（作为“最新报告”入口，方便用户即开即看）
     md_out = os.path.join(output_dir, "personality_profile.md")
     html_out = os.path.join(output_dir, "personality_profile.html")
 
     render_file(md_tpl, md_out, params)
     render_file(html_tpl, html_out, params)
+
+    # 2. 自动归档：同步在 outputs/archive/ 保存带时间戳与受测者代号的历史独立副本
+    if auto_archive:
+        import shutil
+        timestamp_str = datetime.now().strftime("%Y%m%d_%H%M%S")
+        alias_clean = "".join(c for c in str(params.get("USER_ALIAS", "user")) if c.isalnum() or c in ("-", "_")).strip()
+        if not alias_clean:
+            alias_clean = "profile"
+        archive_dir = os.path.join(output_dir, "archive", f"{timestamp_str}_{alias_clean}")
+        os.makedirs(archive_dir, exist_ok=True)
+
+        render_file(md_tpl, os.path.join(archive_dir, "personality_profile.md"), params)
+        render_file(html_tpl, os.path.join(archive_dir, "personality_profile.html"), params)
+
+        # 若当前存在本次的线索追溯档案，也一并安全镜像归档
+        clue_src = os.path.join(output_dir, "clue_tracking_dossier.md")
+        if os.path.exists(clue_src):
+            shutil.copy2(clue_src, os.path.join(archive_dir, "clue_tracking_dossier.md"))
+
+        print(f"[Archive] 本次测评全景档案已安全归档至: {archive_dir}")
 
 
 if __name__ == "__main__":

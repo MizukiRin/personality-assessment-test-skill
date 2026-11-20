@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>心智认知操作系统全景档案 - {USER_ALIAS}</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    :root {
+      --primary: {THEME_PRIMARY};
+      --secondary: {THEME_SECONDARY};
+      --accent: {THEME_ACCENT};
+      --bg-canvas: {THEME_BG_CANVAS};
+      --bg-surface: {THEME_BG_SURFACE};
+      --bg-subtle: {THEME_BG_SUBTLE};
+      --border-line: {THEME_BORDER_LINE};
+      --text-main: {THEME_TEXT_MAIN};
+      --text-muted: {THEME_TEXT_MUTED};
+      --badge-bg: {THEME_BADGE_BG};
+    }
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    @media print {
+      body { background: #ffffff !important; }
+      .no-print { display: none !important; }
+      .section-card { break-inside: avoid; margin-bottom: 2rem; }
+    }
+  </style>
+</head>
+<body class="p-4 sm:p-8 md:p-14 min-h-screen">
+  <div class="max-w-4xl mx-auto space-y-12">
+
+    <!-- 顶部导航与快捷操作 -->
+    <header class="flex items-center justify-between border-b pb-4" style="border-color: var(--border-line);">
+      <div class="flex items-center gap-2 text-sm mono">
+        <span class="font-bold tracking-tight text-base" style="color: var(--text-main);">Dossier</span>
+        <span style="color: var(--text-muted);">/</span>
+        <span style="color: var(--text-muted);">Cognitive Architecture</span>
+        <span class="text-xs px-2 py-0.5 rounded ml-2 border" style="background: var(--bg-subtle); border-color: var(--border-line); color: var(--text-muted);">Sequential Read</span>
+      </div>
+      <div class="flex items-center gap-3 no-print">
+        <button onclick="window.print()" class="text-xs mono px-3 py-1.5 rounded border transition hover:opacity-80 flex items-center gap-1.5" style="border-color: var(--border-line); background: var(--bg-surface);">
+          <span>⎙</span> 打印 / 导出 PDF
+        </button>
+      </div>
+    </header>
+
+    <!-- 头部核心名片：几何线条作为右下角淡雅水印 -->
+    <section class="relative overflow-hidden rounded-xl border p-6 sm:p-10 space-y-6" style="background: var(--bg-surface); border-color: var(--border-line);">
+      <!-- 右下角淡雅意象水印 -->
+      <div class="absolute right-0 bottom-0 w-80 h-52 sm:w-96 sm:h-60 pointer-events-none opacity-15 overflow-hidden flex items-end justify-end select-none">
+        {THEME_METAPHOR_SVG}
+      </div>
+
+      <div class="relative z-10 max-w-2xl space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full inline-block" style="background: var(--primary);"></span>
+          <span class="text-xs mono uppercase tracking-wider" style="color: var(--text-muted);">ARCHETYPE SUMMARY · {ASSESSMENT_DATE}</span>
+        </div>
+        
+        <h1 class="text-3xl sm:text-5xl font-semibold tracking-tight leading-tight">
+          <span class="text-2xl sm:text-4xl font-semibold block mb-1" style="color: var(--text-main);">{USER_ALIAS}</span>
+          <span class="font-bold" style="color: var(--primary);">{MBTI_TYPE}</span>
+        </h1>
+
+        <div class="text-xs mono leading-relaxed pt-1 flex flex-wrap gap-y-1" style="color: var(--text-muted);">
+          <span>九型动力：<strong style="color: var(--text-main);">{ENNEAGRAM_PROFILE}</strong></span>
+          <span class="mx-2">/</span>
+          <span>三元组：<strong style="color: var(--text-main);">{TRITYPE}</strong></span>
+          <span class="mx-2">/</span>
+          <span>副型序列：<strong style="color: var(--text-main);">{INSTINCT_STACK}</strong></span>
+        </div>
+
+        <!-- 专属底层心智格言 -->
+        <div class="pt-2">
+          <div class="p-4 rounded-lg border-l-2 text-xs italic leading-relaxed" style="border-color: var(--primary); background: var(--bg-subtle); color: var(--text-main);">
+            "{THEME_PHILOSOPHY_QUOTE}"
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 正文内容：自上而下顺序流式阅读 -->
+
+    <!-- 01 / 终审心智拓扑架构 -->
+    <section class="section-card space-y-4">
+      <div class="flex items-center justify-between border-b pb-2.5" style="border-color: var(--border-line);">
+        <h2 class="text-xs mono uppercase tracking-wider font-semibold" style="color: var(--text-muted);">
+          01 / MENTAL TOPOLOGY & STACK OVERVIEW
+        </h2>
+        <span class="text-[11px] mono opacity-60">终审心智拓扑</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- 八维功能栈简表 -->
+        <div class="rounded-xl border p-6 space-y-4" style="background: var(--bg-surface); border-color: var(--border-line);">
+          <div class="flex items-center justify-between border-b pb-3" style="border-color: var(--border-line);">
+            <div class="text-xs mono tracking-wider uppercase font-semibold">··· 8-FUNCTION STACK</div>
+            <span class="text-[11px] mono px-2 py-0.5 rounded border" style="background: var(--bg-subtle); border-color: var(--border-line);">认知流</span>
+          </div>
+          
+          <div class="space-y-2 text-xs">
+            <div class="flex items-center justify-between p-2.5 rounded border" style="background: var(--bg-subtle); border-color: var(--border-line);">
+              <span class="font-bold mono">Hero (主导)：{DOMINANT_FUNC}</span>
+              <span class="text-[11px]" style="color: var(--text-muted);">{DOM_DESC}</span>
+            </div>
+            <div class="flex items-center justify-between p-2.5 rounded border" style="background: var(--bg-subtle); border-color: var(--border-line);">
+              <span class="font-bold mono">Parent (辅助)：{AUXILIARY_FUNC}</span>
+              <span class="text-[11px]" style="color: var(--text-muted);">{AUX_DESC}</span>
+            </div>
+            <div class="flex items-center justify-between p-2.5 rounded border" style="background: var(--bg-subtle); border-color: var(--border-line);">
+              <span class="font-bold mono">Child (第三)：{TERTIARY_FUNC}</span>
+              <span class="text-[11px]" style="color: var(--text-muted);">{TERT_DESC}</span>
+            </div>
+            <div class="flex items-center justify-between p-2.5 rounded border" style="border-color: var(--border-line); opacity: 0.85;">
+              <span class="font-semibold mono text-stone-500">Inferior (劣势)：{INFERIOR_FUNC}</span>
+              <span class="text-[11px]" style="color: var(--text-muted);">{INF_DESC}</span>
+            </div>
+            <div class="flex items-center justify-between p-2.5 rounded border" style="border-color: var(--border-line); opacity: 0.75;">
+              <span class="font-semibold mono text-stone-400">Trickster (盲区)：{TRICKSTER_FUNC}</span>
+              <span class="text-[11px]" style="color: var(--text-muted);">{TRICK_DESC}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 九型动力系统简表 -->
+        <div class="rounded-xl border p-6 space-y-4" style="background: var(--bg-surface); border-color: var(--border-line);">
+          <div class="flex items-center justify-between border-b pb-3" style="border-color: var(--border-line);">
+            <div class="text-xs mono tracking-wider uppercase font-semibold">··· MOTIVATION MATRIX</div>
+            <span class="text-[11px] mono px-2 py-0.5 rounded border" style="background: var(--bg-subtle); border-color: var(--border-line);">欲望与防御</span>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div class="p-3 rounded border" style="border-color: var(--border-line);">
+              <span class="text-[11px] mono uppercase block mb-1" style="color: var(--text-muted);">Core & Wings / 主型与侧翼</span>
+              <p class="font-medium text-sm">{ENNEAGRAM_PROFILE}</p>
+            </div>
+            <div class="p-3 rounded border" style="border-color: var(--border-line);">
+              <span class="text-[11px] mono uppercase block mb-1" style="color: var(--text-muted);">Instinct Sequence / 副型本能</span>
+              <p class="font-medium">{INSTINCT_STACK} · {INSTINCT_DESC}</p>
+            </div>
+            <div class="p-3 rounded border" style="border-color: var(--border-line);">
+              <span class="text-[11px] mono uppercase block mb-1" style="color: var(--text-muted);">Defense Hierarchy / 三元组防御</span>
+              <p class="font-medium mono">{TRITYPE_DEFENSE_HIERARCHY}</p>
+            </div>
+            <div class="p-3 rounded border" style="border-color: var(--border-line);">
+              <span class="text-[11px] mono uppercase block mb-1" style="color: var(--text-muted);">Integration Path / 整合发展</span>
+              <p class="font-medium">{INTEGRATION_DESC}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 / 荣格八维心智齿轮深度解析 -->
+    <section class="section-card space-y-4">
+      <div class="flex items-center justify-between border-b pb-2.5" style="border-color: var(--border-line);">
+        <h2 class="text-xs mono uppercase tracking-wider font-semibold" style="color: var(--text-muted);">
+          02 / JUNG FUNCTION DYNAMICS & GEARS
+        </h2>
+        <span class="text-[11px] mono opacity-60">八维齿轮深度解析</span>
+      </div>
+
+      <div class="rounded-xl border p-6 sm:p-8 space-y-6" style="background: var(--bg-surface); border-color: var(--border-line);">
+        <!-- 优势协同轴 -->
+        <div class="space-y-3">
+          <div class="text-xs mono uppercase tracking-wider font-semibold" style="color: var(--primary);">DOMINANT & AUXILIARY / 优势协同轴</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 rounded-lg border space-y-2" style="background: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="font-bold mono text-sm" style="color: var(--primary);">主导功能：{DOMINANT_FUNC}</div>
+              <p><span class="font-semibold">运转机制：</span>{DOM_MECHANISM}</p>
+              <p class="italic" style="color: var(--text-muted);"><span class="font-semibold not-italic">高频体感：</span>"{DOM_EXPERIENCE}"</p>
+            </div>
+            <div class="p-4 rounded-lg border space-y-2" style="background: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="font-bold mono text-sm" style="color: var(--secondary);">辅助功能：{AUXILIARY_FUNC}</div>
+              <p><span class="font-semibold">运转机制：</span>{AUX_MECHANISM}</p>
+              <p><span class="font-semibold">现实载体：</span>{AUX_REALITY_ANCHOR}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 阴影与劣势系统 -->
+        <div class="space-y-3 pt-4 border-t" style="border-color: var(--border-line);">
+          <div class="text-xs mono uppercase tracking-wider font-semibold" style="color: var(--accent);">SHADOW & INFERIOR / 脆弱与阴影系统</div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+            <div class="p-4 rounded-lg border space-y-2" style="border-color: var(--border-line);">
+              <div class="font-bold mono">第三功能 (永恒之童)：{TERTIARY_FUNC}</div>
+              <p><span class="font-semibold">内在圣殿：</span>{TERT_SANCTUARY}</p>
+            </div>
+            <div class="p-4 rounded-lg border space-y-2" style="border-color: var(--border-line);">
+              <div class="font-bold mono">第四功能 (劣势体验)：{INFERIOR_FUNC}</div>
+              <p><span class="font-semibold">日常阻抗：</span>{INF_DAILY_FRICTION}</p>
+              <p><span class="font-semibold">压力暴走：</span>{INF_GRIP_BEHAVIOR}</p>
+            </div>
+            <div class="p-4 rounded-lg border space-y-2" style="border-color: var(--border-line);">
+              <div class="font-bold mono">第七功能 (盲区愚者)：{TRICKSTER_FUNC}</div>
+              <p><span class="font-semibold">盲区表现：</span>{TRICKSTER_BEHAVIOR}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 / 九型动力学与防御阶梯 -->
+    <section class="section-card space-y-4">
+      <div class="flex items-center justify-between border-b pb-2.5" style="border-color: var(--border-line);">
+        <h2 class="text-xs mono uppercase tracking-wider font-semibold" style="color: var(--text-muted);">
+          03 / ENNEAGRAM ENERGETICS & DEFENSE
+        </h2>
+        <span class="text-[11px] mono opacity-60">九型动力学全景</span>
+      </div>
+
+      <div class="rounded-xl border p-6 sm:p-8 space-y-6" style="background: var(--bg-surface); border-color: var(--border-line);">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+          <div class="space-y-4">
+            <div class="p-4 rounded-lg border space-y-2" style="background: var(--bg-subtle); border-color: var(--border-line);">
+              <span class="text-xs mono uppercase tracking-wider block font-semibold" style="color: var(--text-muted);">ENERGY CONSERVATION</span>
+              <h3 class="font-bold text-sm">核心待机与充能模式</h3>
+              <p class="leading-relaxed">{ENERGY_MODEL}</p>
+            </div>
+
+            <div class="p-4 rounded-lg border space-y-2" style="border-color: var(--border-line);">
+              <span class="text-xs mono uppercase tracking-wider block font-semibold" style="color: var(--text-muted);">INSTINCT SEQUENCE ({INSTINCT_STACK})</span>
+              <p><span class="font-semibold mono">主导本能：</span>{DOM_INSTINCT_ANALYSIS}</p>
+              <p><span class="font-semibold mono">次要本能：</span>{SEC_INSTINCT_ANALYSIS}</p>
+              <p><span class="font-semibold mono">盲区本能：</span>{BLIND_INSTINCT_ANALYSIS}</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-lg border space-y-3" style="border-color: var(--border-line);">
+            <span class="text-xs mono uppercase tracking-wider block font-semibold" style="color: var(--text-muted);">TRITYPE HIERARCHY ({TRITYPE})</span>
+            <div class="space-y-2.5">
+              <div class="p-3 rounded border" style="background: var(--bg-subtle); border-color: var(--border-line);">
+                <span class="font-bold mono text-[11px] block text-stone-700">01 / FIRST DEFENSE (第一线防御)</span>
+                <p class="mt-1">{TRITYPE_LEVEL_1}</p>
+              </div>
+              <div class="p-3 rounded border" style="background: var(--bg-subtle); border-color: var(--border-line);">
+                <span class="font-bold mono text-[11px] block text-stone-700">02 / SECOND DEFENSE (第二线反击)</span>
+                <p class="mt-1">{TRITYPE_LEVEL_2}</p>
+              </div>
+              <div class="p-3 rounded border" style="background: var(--bg-subtle); border-color: var(--border-line);">
+                <span class="font-bold mono text-[11px] block text-stone-700">03 / CORE ANXIETY (深核驱动力)</span>
+                <p class="mt-1">{TRITYPE_LEVEL_3}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 / 复合特质与跨型号辨析 -->
+    <section class="section-card space-y-4">
+      <div class="flex items-center justify-between border-b pb-2.5" style="border-color: var(--border-line);">
+        <h2 class="text-xs mono uppercase tracking-wider font-semibold" style="color: var(--text-muted);">
+          04 / COMPOSITE PROFILES & CROSS ANALYSIS
+        </h2>
+        <span class="text-[11px] mono opacity-60">复合表现与对比</span>
+      </div>
+
+      <div class="rounded-xl border p-6 sm:p-8 space-y-6" style="background: var(--bg-surface); border-color: var(--border-line);">
+        <div class="p-5 rounded-lg border space-y-2 text-xs" style="background: var(--bg-subtle); border-color: var(--border-line);">
+          <div class="font-bold mono text-sm mb-2" style="color: var(--primary);">当前组合 ({MBTI_TYPE} + {ENNEAGRAM_PROFILE}) 典型面貌</div>
+          <p><span class="font-semibold">日常形态：</span>{COMPOSITE_TYPICAL_TRAITS}</p>
+          <p><span class="font-semibold">决策习惯：</span>{COMPOSITE_DECISION_STYLE}</p>
+          <p><span class="font-semibold">人际处事：</span>{COMPOSITE_RELATIONAL_STYLE}</p>
+        </div>
+
+        <div class="space-y-3 pt-2">
+          <div class="text-xs mono uppercase tracking-wider font-semibold" style="color: var(--text-muted);">“同八维不同九型”的跨型号差异辨析</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 rounded-lg border space-y-1.5" style="border-color: var(--border-line);">
+              <span class="mono font-semibold" style="color: var(--text-muted);">对照形态 A：</span>
+              <p>{CROSS_ENNEAGRAM_DIFF_A}</p>
+            </div>
+            <div class="p-4 rounded-lg border space-y-1.5" style="border-color: var(--border-line);">
+              <span class="mono font-semibold" style="color: var(--text-muted);">对照形态 B：</span>
+              <p>{CROSS_ENNEAGRAM_DIFF_B}</p>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-lg border text-xs" style="background: var(--bg-subtle); border-color: var(--border-line);">
+            <span class="font-semibold mono" style="color: var(--primary);">为什么当前结论最契合该心智形态：</span>
+            <p class="mt-1">{FIT_RATIONALE}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 / 擅长领域与跃升指南 -->
+    <section class="section-card space-y-4">
+      <div class="flex items-center justify-between border-b pb-2.5" style="border-color: var(--border-line);">
+        <h2 class="text-xs mono uppercase tracking-wider font-semibold" style="color: var(--text-muted);">
+          05 / CAREER ADVANTAGES & GROWTH GUIDELINES
+        </h2>
+        <span class="text-[11px] mono opacity-60">擅长领域与指南</span>
+      </div>
+
+      <div class="rounded-xl border p-6 sm:p-8 space-y-6" style="background: var(--bg-surface); border-color: var(--border-line);">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+          <div class="space-y-4">
+            <div class="p-4 rounded-lg border space-y-2" style="background: var(--bg-subtle); border-color: var(--border-line);">
+              <span class="text-xs mono uppercase tracking-wider font-semibold" style="color: var(--primary);">ADVANTAGE DOMAINS</span>
+              <h3 class="font-bold text-sm">天然优势场域与核心天赋</h3>
+              <p class="leading-relaxed">{CORE_ADVANTAGE_DOMAINS}</p>
+            </div>
+
+            <div class="p-4 rounded-lg border space-y-2" style="border-color: var(--border-line);">
+              <span class="text-xs mono uppercase tracking-wider font-semibold" style="color: var(--text-muted);">OPTIMAL COLLABORATION</span>
+              <h3 class="font-bold text-sm">最佳工作节奏与协作模式</h3>
+              <p class="leading-relaxed">{OPTIMAL_WORKING_MODE}</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-4 rounded-lg border space-y-2" style="border-color: var(--border-line);">
+              <span class="text-xs mono uppercase tracking-wider font-semibold text-amber-700">BLINDSPOT & GROWTH</span>
+              <p><span class="font-semibold">盲点规避：</span>{BLINDSPOT_AVOIDANCE}</p>
+              <p><span class="font-semibold">劣势功能成长：</span>{INFERIOR_DEVELOPMENT}</p>
+            </div>
+
+            <div class="p-4 rounded-lg border space-y-2" style="background: var(--bg-subtle); border-color: var(--border-line);">
+              <span class="text-xs mono uppercase tracking-wider font-semibold" style="color: var(--secondary);">ENERGY & INTEGRATION</span>
+              <p><span class="font-semibold">日常能量保全：</span>{ENERGY_PRESERVATION_STRATEGY}</p>
+              <p><span class="font-semibold">整合落地实践：</span>{INTEGRATION_PRACTICE}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 底部极简版记 -->
+    <footer class="pt-8 pb-4 text-center text-xs mono border-t" style="border-color: var(--border-line); color: var(--text-muted);">
+      <div>COGNITIVE DOSSIER · ARCHITECTURAL SYSTEM EDITION</div>
+    </footer>
+
+  </div>
+</body>
+</html>

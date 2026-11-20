@@ -1,0 +1,15 @@
+{
+  "name": "personality-assessment",
+  "displayName": "Personality Assessment & Profiling",
+  "description": "Professional personality assessment and cognitive profiling based on Jungian cognitive functions (Beebe model) and dynamic Enneagram dynamics.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Rin"
+  },
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Start personality assessment and cognitive profiling",
+    "Analyze my Jungian cognitive functions and Enneagram type",
+    "Generate an editorial aesthetic HTML report for my assessment"
+  ]
+}

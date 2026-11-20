@@ -1,7 +1,7 @@
 # 全景人格认知与心智操作系统档案
 ### —— 认知动力学、八维心智齿轮与现代九型深度复盘报告
 
-> **受测者画像**：`{USER_ALIAS}`  
+> **用户昵称**：`{USER_ALIAS}`  
 > **评定日期**：`{ASSESSMENT_DATE}`  
 > **核心类型结论**：`{MBTI_TYPE}` · 九型 `{ENNEAGRAM_PROFILE}`（`{TRITYPE}`）副型 `{INSTINCT_STACK}`
 

@@ -1,0 +1,30 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+  <!-- Outer subtle circular boundary -->
+  <circle cx="128" cy="128" r="108" stroke="#3E4E59" stroke-width="2.5" stroke-opacity="0.85" />
+  <circle cx="128" cy="128" r="96" stroke="#3E4E59" stroke-width="1.2" stroke-dasharray="3 4" stroke-opacity="0.4" />
+  
+  <!-- Archetypal Axis: Jungian Perception & Judgment axes -->
+  <line x1="128" y1="20" x2="128" y2="236" stroke="#8F4D3C" stroke-width="1.5" stroke-opacity="0.75" />
+  <line x1="20" y1="128" x2="236" y2="128" stroke="#8F4D3C" stroke-width="1.5" stroke-opacity="0.75" />
+  
+  <!-- Subtle diagonal coordinate lines -->
+  <line x1="45" y1="45" x2="211" y2="211" stroke="#3E4E59" stroke-width="1" stroke-dasharray="2 3" stroke-opacity="0.3" />
+  <line x1="211" y1="45" x2="45" y2="211" stroke="#3E4E59" stroke-width="1" stroke-dasharray="2 3" stroke-opacity="0.3" />
+
+  <!-- Enneagrammatic Triadic Nonagon Metaphor (Core Triangles) -->
+  <polygon points="128,40 204,172 52,172" stroke="#3E4E59" stroke-width="1.8" stroke-opacity="0.8" fill="#3E4E59" fill-opacity="0.04" />
+  <polygon points="128,216 52,84 204,84" stroke="#82654A" stroke-width="1.5" stroke-dasharray="4 3" stroke-opacity="0.65" />
+
+  <!-- Center Core & Concentric Anchor Rings -->
+  <circle cx="128" cy="128" r="32" stroke="#8F4D3C" stroke-width="1.5" stroke-opacity="0.6" fill="#FAF9F5" fill-opacity="0.8" />
+  <circle cx="128" cy="128" r="14" stroke="#3E4E59" stroke-width="2" stroke-opacity="0.85" fill="#3E4E59" fill-opacity="0.12" />
+  <circle cx="128" cy="128" r="4" fill="#8F4D3C" />
+
+  <!-- Anchor nodes -->
+  <circle cx="128" cy="40" r="3.5" fill="#8F4D3C" />
+  <circle cx="204" cy="172" r="3.5" fill="#3E4E59" />
+  <circle cx="52" cy="172" r="3.5" fill="#3E4E59" />
+  <circle cx="128" cy="216" r="3" fill="#82654A" />
+  <circle cx="52" cy="84" r="3" fill="#82654A" />
+  <circle cx="204" cy="84" r="3" fill="#82654A" />
+</svg>
