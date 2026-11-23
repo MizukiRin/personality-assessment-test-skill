@@ -73,10 +73,16 @@
 
 ---
 
-## 五、当前心智拓扑假说与证据闭环状态
+## 五、当前心智拓扑假说与证据缺口禁发门控
 
 - **九型能量中心候选**：`{CURRENT_ENNEAGRAM_HYPOTHESIS}`
 - **副型序列假设**：`{CURRENT_INSTINCT_HYPOTHESIS}`
 - **八维认知功能轴判定**：`{CURRENT_MBTI_HYPOTHESIS}`
-- **待验证存疑点与下一步探查策略**：`{NEXT_EXPLORATION_GOAL}`
+- **冲突拦截与质疑复核记录**：`{CONFLICT_INTERCEPTION_LOG}`（记录前后冲突点或受测者质疑后的补充行为核验证据；严禁仅凭口头自称翻案）
+
+### 5.1 终审报告签发门控清单（三项硬证据缺一不可）
+- [ ] **硬证据 1 · 核心防御动机**：`{GATE_DEFENSE_MOTIVE_STATUS}`（是否已获明确情绪/防御行为样本，而非泛化自述）
+- [ ] **硬证据 2 · 感知/判断双轴**：`{GATE_COGNITIVE_AXES_STATUS}`（是否已获脱离媒介载体的默认后台信息流与现实行动摩擦样本）
+- [ ] **硬证据 3 · 劣势反常动作**：`{GATE_INFERIOR_GRIP_STATUS}`（是否已获高压耗竭下的具体反常动作样本）
+- **门控判定与下一步策略**：`{NEXT_EXPLORATION_GOAL}`（若任一项未命中，强制追加 1 轮极简定向核验，严禁脑补提前结案）
 
